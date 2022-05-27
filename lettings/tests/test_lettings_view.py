@@ -6,14 +6,19 @@ from lettings.models import Address, Letting
 
 
 class LettingIndexPageTest(TestCase):
-    """Test that index page returns 200"""
 
     def test_index_page(self):
+        """
+            Test that index page returns 200
+        """
         response = self.client.get(reverse('lettings_index'))
         self.assertEqual(response.status_code, 200)
 
-    # test that in content html the title is correct
-    def test_title_letting_index_page_is_correct(self):
+
+    def test_correct_title_letting_index_page(self):
+        """
+            Test correct title index page
+        """
         response = self.client.get(reverse('lettings_index'))
         self.assertContains(response, "Lettings", status_code=200)
 
@@ -21,7 +26,9 @@ class LettingIndexPageTest(TestCase):
 class LettingListView(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Create fake data for Address
+        """
+            Create fake data for Address
+        """
         cls.fake = Faker()
         cls.address = Address.objects.create(
             number=cls.fake.building_number(),
@@ -58,7 +65,7 @@ class LettingListView(TestCase):
         response = self.client.get(reverse('letting', args=(letting_id,)))
         self.assertEqual(response.status_code, 404)
 
-    def test_title_profile_page_is_correct(self):
+    def test_correct_title_profile_page(self):
         """
             Test html title  is correct
         """
