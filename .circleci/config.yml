@@ -38,10 +38,10 @@ jobs:
           command: docker build -t docker-oc-lettings:0.1 .
       - run:
           name: Login to DockerHub
-          command: docker login --username arz4cordes --password $DOCKERHUB_PASSWORD
+          command: docker login --username maticha84 --password $DOCKERHUB_PASSWORD
       - run:
           name: Link to DockerHub
-          command: docker tag docker-oc-lettings:0.1 arz4cordes/oc-lettings-site:$CIRCLE_SHA1
+          command: docker tag docker-oc-lettings:0.1 maticha84/oc-lettings-site:$CIRCLE_SHA1
       - run:
           name: push Docker image
           command: docker push arz4cordes/oc-lettings-site:$CIRCLE_SHA1
