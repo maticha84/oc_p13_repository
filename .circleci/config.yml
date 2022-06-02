@@ -24,7 +24,7 @@ workflows:
             - build-and-test
       - build-and-push-heroku:
           requires:
-            - build-and-push-heroku
+            - build-and-push-dockerhub
 
 
 # Define a job to be invoked later in a workflow.
