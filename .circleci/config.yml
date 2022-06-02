@@ -66,14 +66,14 @@ jobs:
     steps:
       - checkout
       - run:
-      name: Setup Heroku
-      command: curl https://cli-assets.heroku.com/install.sh | sh # run a script to set up Heroku
-        - run:
-            name: Build and push Docker image to Heroku
-            command: |
-              HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
-              HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
-              HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
+          name: Setup Heroku
+          command: curl https://cli-assets.heroku.com/install.sh | sh # run a script to set up Heroku
+      - run:
+          name: Build and push Docker image to Heroku
+          command: |
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
         - run:
             name: Migrate database
             command: |
