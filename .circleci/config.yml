@@ -20,9 +20,15 @@ workflows:
     jobs:
       - build-and-test
       - build-and-push-dockerhub:
+          filters:
+            branches:
+              only: master
           requires:
             - build-and-test
       - build-and-push-heroku:
+          filters:
+            branches:
+              only: master
           requires:
             - build-and-push-dockerhub
 
