@@ -121,13 +121,16 @@ Retournez dans les settings du projet de CircleCi pour y ajouter l'HEROKU_APP_NA
 2. Créez un projet Django et collectez la clé dsn
 
 
-Retournez dans les settings du projet de CircleCi pour y ajouter cette clé SENTRY_DNS dans les variables d'environnement
-Retournez dans les settings de l'application d'Heroku pour y ajouter cette clé SENTRY_DNS dans les variables d'environnement
+Retournez dans les settings du projet de CircleCi pour y ajouter cette clé SENTRY_DNS dans les 
+variables d'environnement
+Retournez dans les settings de l'application d'Heroku pour y ajouter cette clé SENTRY_DNS 
+dans les variables d'environnement
 
 ### Deploiement :
 Rendez-vous sur votre projet dans CicrleCI.
 SI celui-ci a été détecter, un bouton à droite permet de relancer le déploiement.
-Dans le cas contraire, apportez une modification à un élément de votre code, ajoutez le scripte modifié à votre repo.
+Dans le cas contraire, apportez une modification à un élément de votre code, ajoutez le scripte 
+modifié à votre repo.
 Retrournez sur votre projet dans CicrleCI.
 
 
