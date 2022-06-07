@@ -91,9 +91,9 @@ docker run -d -p 8000:8000 maticha84/oc-lettings-site:d4337f0768a68dbbe7d5cc7138
 2. [installation du projet sur CircleCI](https://circleci.com/docs/2.0/getting-started/ "installation du projet sur CircleCI")
 
 #### Docker :  
-1. Si ce n'est déjà fait, [créez un compte sur Docker](https://hub.docker.com/signup"créez un compte sur Docker")
+1. Si ce n'est déjà fait, [créez un compte sur Docker](https://hub.docker.com/signup/ "créez un compte sur Docker")
 2. Créez en nouveau repository. 
-3. Une fois affectué, remplacez, à la ligne 42 du fichier .circleci/config.yml
+3. Une fois effectué, remplacez, à la ligne 68 du fichier .circleci/config.yml
 oc-lettings ($DOCKERHUB_USERNAME/oc-lettings) par votre repository  
 
 
@@ -103,12 +103,10 @@ Vous pouvez retourner dans CircleCi - Organization Settings - Create a context, 
 #### Heroku : 
 Si ce n'est déjà fait, [créez un compte sur Heroku](https://www.heroku.com/home "créez un compte sur Heroku")
 1. Création de l'application
-2. Ajoutez une base de donnés à votre application :  
-Dans Resources, Add-ons, tapez Postgres
-3. Cnfigurez vos variables d'environnement :  
-Dans Settings, Config Vars, vous y verez la variable de votre base de donnée (DATABASE_URL)
+2Cnfigurez vos variables d'environnement :  
+Dans Settings, Config Vars : 
 Ajoutez la variable ENV (production), une SECRET_KEY django et, quand vous l'aurez, la variable SENTRY_DNS
-4. Identification compte Heroku
+2. Identification compte Heroku
 Heroku propose [3 modes d'identification différents](https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api "3 modes d'identification différents")
 Le plus simple étant de reprendre l'API Key qui se trouve en bas des [settings de votre compte](https://dashboard.heroku.com/account "settings de votre compte")
 
@@ -129,14 +127,10 @@ dans les variables d'environnement
 ### Deploiement :
 Rendez-vous sur votre projet dans CicrleCI.
 SI celui-ci a été détecter, un bouton à droite permet de relancer le déploiement.
-Dans le cas contraire, apportez une modification à un élément de votre code, ajoutez le scripte 
+Dans le cas contraire, apportez une modification à un élément de votre code, ajoutez le script
 modifié à votre repo.
 Retrournez sur votre projet dans CicrleCI.
 
-
 CircleCI devrait démarer les tests, puis le déploiement.
 
-
-Alimentez la base de donnée depuis le terminal :  
-`>>> heroku run python manage.py -a "nom de l'application" loaddata datafromsqlite.json`
 Vous devriez avoir accès au site de l'application sous http://<nom-de-l'application>.herokuapp.com/
