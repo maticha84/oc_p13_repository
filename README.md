@@ -78,7 +78,7 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
 
 
-### Recuperation et lancement de l'image docker : 
+### Récupération et lancement de l'image docker : 
 docker run -d -p 8000:8000 maticha84/oc-lettings-site:d4337f0768a68dbbe7d5cc7138a25013dbc8034b
 
 
@@ -124,13 +124,13 @@ variables d'environnement
 Retournez dans les settings de l'application d'Heroku pour y ajouter cette clé SENTRY_DNS 
 dans les variables d'environnement
 
-### Deploiement :
+### Déploiement :
 Rendez-vous sur votre projet dans CicrleCI.
 SI celui-ci a été détecter, un bouton à droite permet de relancer le déploiement.
 Dans le cas contraire, apportez une modification à un élément de votre code, ajoutez le script
 modifié à votre repo.
-Retrournez sur votre projet dans CicrleCI.
+Retournez sur votre projet dans CicrleCI.
 
-CircleCI devrait démarer les tests, puis le déploiement.
+CircleCI devrait démarrer les tests, puis le déploiement.
 
 Vous devriez avoir accès au site de l'application sous http://<nom-de-l'application>.herokuapp.com/
