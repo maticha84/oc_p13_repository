@@ -103,15 +103,15 @@ Vous pouvez retourner dans CircleCi - Organization Settings - Create a context, 
 #### Heroku : 
 Si ce n'est déjà fait, [créez un compte sur Heroku](https://www.heroku.com/home "créez un compte sur Heroku")
 1. Création de l'application
-2Cnfigurez vos variables d'environnement :  
+2. Configurez vos variables d'environnement :  
 Dans Settings, Config Vars : 
 Ajoutez la variable ENV (production), une SECRET_KEY django et, quand vous l'aurez, la variable SENTRY_DNS
-2. Identification compte Heroku
+3. Identification compte Heroku
 Heroku propose [3 modes d'identification différents](https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api "3 modes d'identification différents")
 Le plus simple étant de reprendre l'API Key qui se trouve en bas des [settings de votre compte](https://dashboard.heroku.com/account "settings de votre compte")
 
 
-Retournez dans les organization settings de CircleCi pour y ajouter cette HEROKU_API_KEY
+Retournez dans les "organization settings" de CircleCi pour y ajouter cette HEROKU_API_KEY
 Retournez dans les settings du projet de CircleCi pour y ajouter l'HEROKU_APP_NAME
 
 #### Sentry :
