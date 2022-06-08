@@ -79,7 +79,7 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 
 ### Récupération et lancement de l'image docker : 
-docker run -d -p 8000:8000 maticha84/oc-lettings-site:$TAG, où $TAG est le dernier commit de circle ci (dernier push sur docker hub)
+`docker run -d -p 8000:8000 maticha84/oc-lettings-site:$TAG`, où $TAG est le dernier commit de circle ci (dernier push sur docker hub)
 
 
 ### Fonctionnement du deploiement
