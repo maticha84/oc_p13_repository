@@ -1,5 +1,5 @@
 from django.test import TestCase
-from django.urls import reverse, resolve
+from django.urls import reverse
 from faker import Faker
 
 from lettings.models import Address, Letting
@@ -13,7 +13,6 @@ class LettingIndexPageTest(TestCase):
         """
         response = self.client.get(reverse('lettings_index'))
         self.assertEqual(response.status_code, 200)
-
 
     def test_correct_title_letting_index_page(self):
         """
