@@ -1,12 +1,9 @@
 import os
 
-import django_on_heroku
 
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-from dotenv import load_dotenv
-load_dotenv()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -136,6 +133,3 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
-
-# Configure Django App for Heroku.
-django_on_heroku.settings(locals())
